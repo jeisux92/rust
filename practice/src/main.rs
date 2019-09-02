@@ -31,7 +31,7 @@ fn main() {
     println!("References: {1}{0}", get_greeting(), "holi ");
     //Slice
     let mut s = String::from("hello world");
-    let world = first_word(&s);
+    let world = first_word(&s[..]);
     s.clear();
 
     println!("{}", world);

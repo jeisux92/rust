@@ -1,15 +1,18 @@
 fn main() {
-    let some_u8_value = Some(3);
+    let mut some_u8_value = Some(3);
     
 
-    check_number_match(some_u8_value);
+    check_number_match(&mut some_u8_value);
     let number = if_let(some_u8_value);
     println!("{:#?}{}",some_u8_value, number);
 }
 
-fn check_number_match(number:Option<u32>){
+fn check_number_match(number:&mut Option<u32>){
     match number {
-            Some(s) => println!("three {}",s),
+            Some(s) =>{ 
+               *s+=2;
+                println!("three {}",s);
+            },
             _ => (),
         }
 }
