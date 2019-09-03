@@ -14,10 +14,6 @@ fn main() {
         None => println!("0"),
     }
 
-    for i in &v {
-        println!("{}", i);
-    }
-
     for i in &mut v {
         *i += 10;
         println!("{}", i);
